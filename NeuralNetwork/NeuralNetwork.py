@@ -21,18 +21,23 @@ class NeuralNetwork:
         for i,layer in enumerate(self.layers):
             weights,bias = layer
             linear_output = layer_output@weights.T + bias
-            layer_output = self.activation_func[i](linear_output)
+            activation_func = self.activation_func[i]
+            layer_output = activation_func(linear_output)
             layer_outputs.append(layer_output)
         # print(layer_outputs)
         return layer_output[-1]
     
+    def __call__(self, *args, **kwds):
+        return self.forward(*args,**kwds)
+    
     def set_weights(self,weights):
         self.layers = weights
 
-
+    
 if __name__ == "__main__":
-    relu = lambda x: np.maximum(0, x)
-    linear = lambda x: x
+    from NeuralNetwork.activation import ReLU, Linear
+    relu = ReLU()
+    linear = Linear()
     my_network = NeuralNetwork(4,[5],3,[relu,linear])
     weights = [(np.array([[-0.46684736, -0.36128312, -0.257765  ,  0.31546897],
        [ 0.29316062, -0.22174752, -0.01804119,  0.31978035],

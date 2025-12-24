@@ -63,10 +63,9 @@ b3 = model.fc3.bias.detach().numpy()
 # -----------------------------
 from NeuralNetwork import NeuralNetwork
 
-def relu(x):
-    return np.maximum(0, x)
-linear = lambda x: x
-
+from NeuralNetwork.activation import ReLu, Linear
+relu = ReLu()
+linear = Linear()
 diy_network = NeuralNetwork.NeuralNetwork(4,[5,5],3,[relu,relu,linear])
 diy_network.set_weights([(W1,b1),(W2,b2),(W3,b3)])
 print([(W1,b1),(W2,b2),(W3,b3)])
@@ -109,3 +108,4 @@ if __name__ == "__main__":
         # Pass / fail check
         assert np.allclose(torch_out, home_out, atol=1e-6), "\n❌ Forward pass MISMATCH"
 
+    print(type(relu))
