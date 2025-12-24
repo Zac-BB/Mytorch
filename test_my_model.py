@@ -63,7 +63,7 @@ from NeuralNetwork.activation import ReLU, Linear, Softmax
 relu = ReLU()
 linear = Linear()
 softmax = Softmax()
-net = NeuralNetwork.NeuralNetwork(28*28,[512,512],10,[relu,relu,softmax])
+net = NeuralNetwork.NeuralNetwork(28*28,[512,512],10,[relu,relu,linear])
 
 W1 = fake_net.fc1.weight.detach().numpy()  # (out, in)
 b1 = fake_net.fc1.bias.detach().numpy()
@@ -155,7 +155,8 @@ def TestOperation(model, testloader, LabelsPathPred):
     # with torch.no_grad():
     for image, _ in tqdm(testloader):
         image_np = image.numpy()
-        image_flat = image_np.flatten()
+        image_flat = image_np.reshape([1,784])
+
         output = model.forward(image_flat)
         prediction = np.argmax(output)
         preds.append(prediction)
