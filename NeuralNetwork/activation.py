@@ -7,7 +7,9 @@ class ActivationFunction(ABC):
     def __call__(self,zi):
         # called in the forward step 
         pass
-
+    
+    def forward(self,zi):
+        return self.__call__(zi)
     # @staticmethod
     @abstractmethod
     def partial_derivative(self,zi):
@@ -31,9 +33,9 @@ class Linear(ActivationFunction):
  
 class Softmax(ActivationFunction):
     def __call__(self, zi):
-        shifted = zi - np.max(zi, axis=0, keepdims=True)
+        shifted = zi - np.max(zi)
         exp_z = np.exp(shifted)
-        return exp_z / np.sum(exp_z, axis=0, keepdims=True)
+        return exp_z / np.sum(exp_z)
 
     def partial_derivative(self, zi, y_true):
         """

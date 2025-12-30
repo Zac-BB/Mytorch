@@ -20,7 +20,7 @@ class NeuralNetwork:
         layer_outputs = [layer_output]
         for i,layer in enumerate(self.layers):
             weights,bias = layer
-            linear_output = layer_output@weights.T + bias
+            linear_output = layer_output@weights.T #+ bias
             activation_func = self.activation_func[i]
             layer_output = activation_func(linear_output)
             layer_outputs.append(layer_output)
@@ -32,6 +32,10 @@ class NeuralNetwork:
     
     def set_weights(self,weights):
         self.layers = weights
+    
+    def gradient(self,x,y,loss_func):
+        #calculate dL / da
+        pass
 
     
 if __name__ == "__main__":
