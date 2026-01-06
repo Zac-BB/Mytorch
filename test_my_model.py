@@ -73,7 +73,7 @@ b2 = fake_net.fc2.bias.detach().numpy()
 
 W3 = fake_net.fc3.weight.detach().numpy()
 b3 = fake_net.fc3.bias.detach().numpy()
-net.set_weights([(W1,b1),(W2,b2),(W3,b3)])
+net.set_weights({"W":[W1,W2,W3],"b":[b1,b2,b3]})
 
 def ReadImages(Img):
     """
@@ -146,14 +146,18 @@ def ConfusionMatrix(LabelsTrue, LabelsPred):
     print('Accuracy: '+ str(Accuracy(LabelsPred, LabelsTrue)), '%')
     plt.show()
 
+
+
+
 def TestOperation(model, testloader, LabelsPathPred):
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     # model.eval()
 
     preds = []
-
+    from sklearn.utils import gen_batches
+    # batchs = gen_batches(len())
     # with torch.no_grad():
-    for image, _ in tqdm(testloader):
+    for image, _ in (testloader):
         image_np = image.numpy()
         image_flat = image_np.reshape([1,784])
 
@@ -168,7 +172,27 @@ def TestOperation(model, testloader, LabelsPathPred):
 
 
 LabelsPathPred = './TxtFiles/PredOut.txt' # Path to save predicted labels
-TestOperation(net, testset, LabelsPathPred)
+
+import time
+
+
+times = []
+for i in tqdm(range(100)):
+    start_time = time.perf_counter()
+    TestOperation(net, testset, LabelsPathPred)
+    end_time = time.perf_counter()
+    times.append(end_time-start_time)
+
+import matplotlib.pyplot as plt
+import pickle
+with open('no_batch.pkl', 'wb') as file:
+    pickle.dump(times, file)
+
+plt.hist(times)
+plt.title("Times")
+plt.xlabel("Func Times (Sec)")
+plt.ylabel("Frequency")
+plt.show()
 
 LabelsPath = "./TxtFiles/LabelsTest.txt"
 
