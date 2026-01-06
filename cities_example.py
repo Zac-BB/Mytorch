@@ -1,5 +1,8 @@
-from NeuralNetwork.NeuralNetwork import NeuralNetwork
-from NeuralNetwork.activation import Softmax, Linear,ReLU
+# from NeuralNetwork.NeuralNetwork import NeuralNetwork
+# from NeuralNetwork.activation import Softmax, Linear,ReLU
+from NeuralNetwork import NeuralNetwork, Softmax, Linear, one_hot
+from typing import Tuple, List
+
 import numpy as np
 
 training_data = [
@@ -20,9 +23,13 @@ training_data = [
     ([52.5169,13.4019],2),
     ([52.5074,13.3904],2),
     ([52.5251,13.3694],2),
+
     ]
 
 
+
+
+labels = ("Paris", "Madrid", "Berlin")
 
 if False:
     import pickle
@@ -48,10 +55,45 @@ net = NeuralNetwork(1,[],3,[softmax])
 print(net.layers)
 
 
-layers = [(np.array([1.0,0.10,-1.0]).reshape(-1, 1),np.zeros([3]))]
+layers = {
+    "W": [np.array([1.0,0.10,-1.0]).reshape(-1, 1)],
+    "b": [np.zeros([3])]
+}
 print(layers)
 net.set_weights(layers)
 
 out = net(np.array([[2.3514]]))
 
 print(out)
+
+
+
+def manual_gradient(x: np.ndarray,y_hat: np.ndarray,y: np.ndarray) -> Tuple[np.ndarray]:
+    input_size, output_size = 1, 3
+    x = x.reshape(1, input_size)        # (1,1)
+    y_hat = y_hat.reshape(output_size, 1)
+    y = y.reshape(output_size, 1)
+
+    error = y_hat - y          # (3,1)
+    dw = error @ x.T           # (3,1)
+    db = error.flatten()       # (3,)
+
+    return dw, db
+    # x = np.reshape(x,(input_size,))
+    # y_hat = np.reshape(y_hat,(output_size,))
+    # y = np.reshape(y,(output_size,))
+    # dw = np.zeros((output_size,input_size))
+    # db = np.zeros(output_size)
+    # for row_i in range(output_size):
+    #     error = (y_hat[row_i] - y[row_i])
+    #     for col_j in range(input_size):
+    #         dw[row_i][col_j] = x[col_j] * error
+    #     db[row_i] = error
+
+    # return dw,db
+
+
+
+
+y = one_hot(np.array([0]),3)
+print(manual_gradient(np.array([[2.3514]]),out,y))

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="KmlFile">
+	<gx:CascadingStyle kml:id="__managed_style_581EA6BF263CCACDDA0C">
+		<Style>
+			<IconStyle>
+				<scale>1.2</scale>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>6</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<gx:CascadingStyle kml:id="__managed_style_4CC24F079E3CCACDDA0C">
+		<Style>
+			<IconStyle>
+				<Icon>
+					<href>https://earth.google.com/earth/document/icon?color=1976d2&amp;id=2000&amp;scale=4</href>
+				</Icon>
+				<hotSpot x="64" y="128" xunits="pixels" yunits="insetPixels"/>
+			</IconStyle>
+			<LabelStyle>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff2dc0fb</color>
+				<width>4</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>40ffffff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<displayMode>hide</displayMode>
+			</BalloonStyle>
+		</Style>
+	</gx:CascadingStyle>
+	<StyleMap id="__managed_style_301348ABE73CCACDDA0C">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#__managed_style_4CC24F079E3CCACDDA0C</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#__managed_style_581EA6BF263CCACDDA0C</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Placemark id="0BE4BBC98B3CCACDDA08">
+		<name>Basilica de la Sagrada familia</name>
+		<LookAt>
+			<longitude>2.174078823969305</longitude>
+			<latitude>41.40400809248679</latitude>
+			<altitude>29.09756136294998</altitude>
+			<heading>359.9995523000855</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>611.8393938768713</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_301348ABE73CCACDDA0C</styleUrl>
+		<Point>
+			<coordinates>2.173961309539918,41.40390892929788,29.15439916288777</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0603E66E9F3CCACEF9C7">
+		<name>Olympic Stadium</name>
+		<LookAt>
+			<longitude>2.150305991041122</longitude>
+			<latitude>41.3645979401176</latitude>
+			<altitude>82.80571771981271</altitude>
+			<heading>359.9995494435909</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>929.3593402292754</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_301348ABE73CCACDDA0C</styleUrl>
+		<Point>
+			<coordinates>2.151966783621362,41.36471074800421,87.98722834169845</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="007BE63F263CCACFBA6F">
+		<name>Airport</name>
+		<LookAt>
+			<longitude>2.069935972754027</longitude>
+			<latitude>41.30605090948961</latitude>
+			<altitude>5.840209154137899</altitude>
+			<heading>359.9995475788177</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>12228.078662802</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_301348ABE73CCACDDA0C</styleUrl>
+		<Point>
+			<coordinates>2.0768436228358,41.30103274358438,1.610399794793367</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0C9DE3A3793CCAD084D0">
+		<name>Parc de Montigala</name>
+		<LookAt>
+			<longitude>2.228260126170312</longitude>
+			<latitude>41.45551681682058</latitude>
+			<altitude>56.2563340697782</altitude>
+			<heading>359.9995424209774</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>1487.918346829101</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_301348ABE73CCACDDA0C</styleUrl>
+		<Point>
+			<coordinates>2.231241411563007,41.45555573318838,47.40913985147631</coordinates>
+		</Point>
+	</Placemark>
+	<Placemark id="0F68622A4B3CCAD3149B">
+		<name>Parc i Roserar de Cervantes</name>
+		<LookAt>
+			<longitude>2.106066730497276</longitude>
+			<latitude>41.38467660553229</latitude>
+			<altitude>103.9033511491005</altitude>
+			<heading>359.9995380411844</heading>
+			<tilt>0</tilt>
+			<gx:fovy>35</gx:fovy>
+			<range>504.6247328896425</range>
+			<altitudeMode>absolute</altitudeMode>
+		</LookAt>
+		<styleUrl>#__managed_style_301348ABE73CCACDDA0C</styleUrl>
+		<Point>
+			<coordinates>2.106045127828322,41.38444257120707,102.2285583798634</coordinates>
+		</Point>
+	</Placemark>
+</Document>
+</kml>
+<?earth data="CukCCuYCCr4CChQwQkU0QkJDOThCM0NDQUNEREEwOBK0ARJFChIZakaEibazREAhlf4-cINkAUARLTkPyPkYPUAYASEkeI0q_n92QCkAAAAAAAAAADEADSMUtx6DQEEAAAAAAIBBQFABGAEiHkJhc2lsaWNhIGRlIGxhIFNhZ3JhZGEgZmFtaWxpYSoAMgA6BAoAEgBAAkonEiUKIwoSGcnyrEmzs0RAIT3yudNFZAFAGAIgACn8IRu0hic9QDAAcgCCAQ4KBggBEgIIARIECAEQAYgBATJvCiIKIAoDCNAPGgcI0u1lEP8BIQAAAAAAAPA_KQAAAAAAAAAAEg0KCAitgO8HEP8BEKAfGhgKBwj___8HEEASCAitgO8HEP8BGKAfIAAiCQgBEgUI____ByoVCAESCAj___8HEP8BGQAAAAAAAPA_EgAaITFTM0J6WjFWLVQ4Q2lGX2RTTDdrVHhPQ1RyZkJ4X1luMwraAgrXAgqvAgoUMDYwM0U2NkU5RjNDQ0FDRUY5QzcSpQESRQoSGT1_MiWrrkRAId5Qn6DTMwFAEc8ZDuGQs1RAGAEhU6-OJ_5_dkApAAAAAAAAAAAxACfF7d8KjUBBAAAAAACAQUBQARgBIg9PbHltcGljIFN0YWRpdW0qADIAOgQKABIAQAJKJxIlCiMKEhnBln_Xrq5EQCFB221cOjcBQBgCIAAp3lHIvy7_VUAwAHIAggEOCgYIARICCAESBAgBEAGIAQEybwoiCiAKAwjQDxoHCNLtZRD_ASEAAAAAAADwPykAAAAAAAAAABINCggIrYDvBxD_ARCgHxoYCgcI____BxBAEggIrYDvBxD_ARigHyAAIgkIARIFCP___wcqFQgBEggI____BxD_ARkAAAAAAADwPxIAGiExUzNCeloxVi1UOENpRl9kU0w3a1R4T0NUcmZCeF9ZbjMK0gIKzwIKpwIKFDAwN0JFNjNGMjYzQ0NBQ0ZCQTZGEp0BEkUKEhmglRutLKdEQCEGV16XOo8AQBHUSdvJX1wXQBgBIRcdmiX-f3ZAKQAAAAAAAAAAMQBpnxEK4sdAQQAAAAAAgEFAUAEYASIHQWlycG9ydCoAMgA6BAoAEgBAAkonEiUKIwoSGStcrj2IpkRAISrjdzBgnQBAGAIgAClC9kGTMsT5PzAAcgCCAQ4KBggBEgIIARIECAEQAYgBATJvCiIKIAoDCNAPGgcI0u1lEP8BIQAAAAAAAPA_KQAAAAAAAAAAEg0KCAitgO8HEP8BEKAfGhgKBwj___8HEEASCAitgO8HEP8BGKAfIAAiCQgBEgUI____ByoVCAESCAj___8HEP8BGQAAAAAAAPA_EgAaITFTM0J6WjFWLVQ4Q2lGX2RTTDdrVHhPQ1RyZkJ4X1luMwrcAgrZAgqxAgoUMEM5REUzQTM3OTNDQ0FEMDg0RDASpwESRQoSGd-CA2BOukRAIf8Ohwt60wFAESNGB47PIExAGAEhAJExIP5_dkApAAAAAAAAAAAxgXUcY6w_l0BBAAAAAACAQUBQARgBIhFQYXJjIGRlIE1vbnRpZ2FsYSoAMgA6BAoAEgBAAkonEiUKIwoSGVPGd6ZPukRAIeYm4RiV2QFAGAIgAClgytSxXrRHQDAAcgCCAQ4KBggBEgIIARIECAEQAYgBATJvCiIKIAoDCNAPGgcI0u1lEP8BIQAAAAAAAPA_KQAAAAAAAAAAEg0KCAitgO8HEP8BEKAfGhgKBwj___8HEEASCAitgO8HEP8BGKAfIAAiCQgBEgUI____ByoVCAESCAj___8HEP8BGQAAAAAAAPA_EgAaITFTM0J6WjFWLVQ4Q2lGX2RTTDdrVHhPQ1RyZkJ4X1luMwrmAgrjAgq7AgoUMEY2ODYyMkE0QjNDQ0FEMzE0OUISsQESRQoSGRQmQBU9sURAIYFvlYM52QBAETKMVoHQ-VlAGAEh69-ZG_5_dkApAAAAAAAAAAAxABzq5_6Jf0BBAAAAAACAQUBQARgBIhtQYXJjIGkgUm9zZXJhciBkZSBDZXJ2YW50ZXMqADIAOgQKABIAQAJKJxIlCiMKEhkkQwdqNbFEQCHcYR8wLtkAQBgCIAApWq9Ts6COWUAwAHIAggEOCgYIARICCAESBAgBEAGIAQEybwoiCiAKAwjQDxoHCNLtZRD_ASEAAAAAAADwPykAAAAAAAAAABINCggIrYDvBxD_ARCgHxoYCgcI____BxBAEggIrYDvBxD_ARigHyAAIgkIARIFCP___wcqFQgBEggI____BxD_ARkAAAAAAADwPxIAGiExUzNCeloxVi1UOENpRl9kU0w3a1R4T0NUcmZCeF9ZbjM"?>
